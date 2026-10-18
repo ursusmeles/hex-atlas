@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#211c36" />
+    <title>The quiet frontier · Hex sandbox</title>
+  </head>
+  <body>
+    <main>
+      <div id="hex-smooth-riverlands">
+        <div class="hp-top">
+          <div class="hp-title">The quiet frontier</div>
+          <div class="hp-tools">
+            <select id="hp-preset" aria-label="Colour palette">
+              <option value="dusk">Dusk & gold</option>
+              <option value="ember">Ember coast</option>
+              <option value="moss">Moss & bone</option>
+              <option value="alien">Alien orchard</option>
+              <option value="custom" hidden>Custom</option></select
+            ><button type="button" class="cursor-interaction" id="hp-regenerate">Regenerate</button
+            ><span class="hp-zooms"
+              ><button
+                class="hp-zoom cursor-interaction"
+                id="hp-out"
+                type="button"
+                aria-label="Zoom out"
+              >
+                −</button
+              ><button
+                class="hp-zoom cursor-interaction"
+                id="hp-in"
+                type="button"
+                aria-label="Zoom in"
+              >
+                +
+              </button></span
+            >
+          </div>
+        </div>
+        <div class="hp-scene" id="hp-scene">
+          <div class="hp-fallback" id="hp-loading">Preparing the landscape…</div>
+        </div>
+        <div class="hp-status" aria-live="polite">
+          <select id="hp-selection" aria-label="Selected hex"></select
+          ><span>Drag to pan · Scroll or pinch to zoom</span>
+        </div>
+        <div class="hp-palette">
+          <label class="hp-color"
+            ><input
+              class="cursor-interaction"
+              type="color"
+              id="hp-ground"
+              value="#282039"
+              aria-label="Background and ground seed colour"
+            />
+            <div>
+              <span>Ground</span>
+              <div class="hp-hex-code" id="hp-ground-value">#282039</div>
+            </div></label
+          ><label class="hp-color"
+            ><input
+              class="cursor-interaction"
+              type="color"
+              id="hp-water"
+              value="#237d89"
+              aria-label="Water seed colour"
+            />
+            <div>
+              <span>Water</span>
+              <div class="hp-hex-code" id="hp-water-value">#237D89</div>
+            </div></label
+          ><label class="hp-color"
+            ><input
+              class="cursor-interaction"
+              type="color"
+              id="hp-elements"
+              value="#e5b96e"
+              aria-label="Elements seed colour"
+            />
+            <div>
+              <span>Elements</span>
+              <div class="hp-hex-code" id="hp-elements-value">#E5B96E</div>
+            </div></label
+          >
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
