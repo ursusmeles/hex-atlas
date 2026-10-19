@@ -1,0 +1,374 @@
+{
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/17FR-d_LzEMoaRjDUQdgTVXH_jDk3AkRtOZphgF6RKDw/edit",
+    "readDate": "2026-10-19",
+    "ranges": ["'Map names'!B4:E33", "'Terrain logic'!A3:E11", "'Points of interest'!A2:D13"]
+  },
+  "pointsOfInterest": [
+    {
+      "kind": "bridge",
+      "name": "Bridge",
+      "props": "bridge; wooden or stone",
+      "hue": null,
+      "placement": "On river only. If there's a PL in 3-hex proximity of river, there's 80% chance to spawn bridge OR ferry. Bridge is preferred. Wooden near towns and villages, stone near towns and cities. One crossing in reasonable radius on the same river."
+    },
+    {
+      "kind": "ferry",
+      "name": "Ferry",
+      "props": "docks and boat between",
+      "hue": null,
+      "placement": "On river only. See bridge."
+    },
+    {
+      "kind": "ruins",
+      "name": "Ruins",
+      "props": "ruins (different shapes)",
+      "hue": "C",
+      "placement": "Prefers mountains, dense forests, islands, wetlands. Dislikes PL and farmlands."
+    },
+    {
+      "kind": "encampment",
+      "name": "Encampment",
+      "props": "campfire (0-1), tent (0-3)",
+      "hue": "W",
+      "placement": "Prefers meadows, light forests."
+    },
+    {
+      "kind": "watchtower",
+      "name": "Watchtower",
+      "props": "single tower or lighthouse",
+      "hue": "C",
+      "placement": "Prefers meadows, elevation and PL proximity. Greatly prefers cliffs (elevation shift 2 levels or more). When on the coast, it's a watchtower 75%. Can spawn on islands. Dislikes dense forests. Can spawn in PL."
+    },
+    {
+      "kind": "stronghold",
+      "name": "Stronghold",
+      "props": "building with gate and towers (1-3), different shape of building and height of towers",
+      "hue": "C",
+      "placement": "No more than one per region. Prefers 2-3 elevation and mountains proximity. Prefers farmlands. Dislikes wetlands. Can spawn adjacent to PL. Cannot spawn in PL."
+    },
+    {
+      "kind": "lair",
+      "name": "Lair",
+      "props": "Cave OR nest",
+      "hue": "C",
+      "placement": "Prefers wetlands, mountains, canyons, penisulas, islands. Greatly dislikes PL proximity."
+    },
+    {
+      "kind": "mystic",
+      "name": "Mystic",
+      "props": "Portal, Altar OR Standing Stone",
+      "hue": "C",
+      "placement": "Rare. Prefers penisulas, islands, lakes proximity. Can spawn adjacent to or in PL."
+    },
+    {
+      "kind": "abbey",
+      "name": "Abbey",
+      "props": "chapel style building, no religious marks",
+      "hue": "W",
+      "placement": "Prefers farmlands and villages proximity. Can spawn adjacent to village or town. Cannot spawn in PL."
+    },
+    {
+      "kind": "battlefield",
+      "name": "Battlefield",
+      "props": "banner, 1-3 skulls",
+      "hue": "C",
+      "placement": "Rare. Prefers meadows. Cannot spawn in PL. Can spawn adjacent to watchtower and stronghold and doesn't count to the limit then."
+    },
+    {
+      "kind": "dungeon",
+      "name": "Dungeon",
+      "props": "mine gate OR dungeon gate",
+      "hue": "C",
+      "placement": "Prefers mountains strongly. Mine when near settlements, dungeon when not."
+    }
+  ],
+  "adjectives": [
+    {
+      "word": "Quiet",
+      "modifiers": []
+    },
+    {
+      "word": "Soaked",
+      "modifiers": ["W"]
+    },
+    {
+      "word": "Wild",
+      "modifiers": ["DW"]
+    },
+    {
+      "word": "Desolated",
+      "modifiers": ["-PL", "-F"]
+    },
+    {
+      "word": "Misty",
+      "modifiers": []
+    },
+    {
+      "word": "Forgotten",
+      "modifiers": ["-PL"]
+    },
+    {
+      "word": "Veiled",
+      "modifiers": []
+    },
+    {
+      "word": "Hollow",
+      "modifiers": []
+    },
+    {
+      "word": "Ashen",
+      "modifiers": ["-LW", "-DW", "-F"]
+    },
+    {
+      "word": "Eldritch",
+      "modifiers": []
+    },
+    {
+      "word": "Umbral",
+      "modifiers": []
+    },
+    {
+      "word": "Sepulchral",
+      "modifiers": ["-PL", "-F"]
+    },
+    {
+      "word": "Waning",
+      "modifiers": []
+    },
+    {
+      "word": "Sundered",
+      "modifiers": []
+    },
+    {
+      "word": "Drowned",
+      "modifiers": ["W", "-F"]
+    },
+    {
+      "word": "Thorned",
+      "modifiers": ["LW", "DW"]
+    },
+    {
+      "word": "Accursed",
+      "modifiers": ["-PL"]
+    },
+    {
+      "word": "Moonlit",
+      "modifiers": []
+    },
+    {
+      "word": "Pale",
+      "modifiers": []
+    },
+    {
+      "word": "Hushed",
+      "modifiers": []
+    },
+    {
+      "word": "Wyrd",
+      "modifiers": []
+    },
+    {
+      "word": "Nameless",
+      "modifiers": ["-PL"]
+    },
+    {
+      "word": "Hallowed",
+      "modifiers": []
+    },
+    {
+      "word": "Starless",
+      "modifiers": []
+    },
+    {
+      "word": "Twilit",
+      "modifiers": []
+    },
+    {
+      "word": "Unhallowed",
+      "modifiers": ["-PL"]
+    },
+    {
+      "word": "Antediluvian",
+      "modifiers": []
+    },
+    {
+      "word": "Dreaming",
+      "modifiers": []
+    },
+    {
+      "word": "Sunken",
+      "modifiers": ["W"]
+    },
+    {
+      "word": "Elder",
+      "modifiers": []
+    }
+  ],
+  "nouns": [
+    {
+      "word": "Frontier",
+      "modifiers": ["-F"]
+    },
+    {
+      "word": "Realm",
+      "modifiers": []
+    },
+    {
+      "word": "Marches",
+      "modifiers": []
+    },
+    {
+      "word": "Kingdom",
+      "modifiers": ["PL", "F"]
+    },
+    {
+      "word": "Reach",
+      "modifiers": []
+    },
+    {
+      "word": "Wilds",
+      "modifiers": ["DW", "-PL", "-F"]
+    },
+    {
+      "word": "Weald",
+      "modifiers": ["LW", "DW"]
+    },
+    {
+      "word": "Wold",
+      "modifiers": ["M", "-DW"]
+    },
+    {
+      "word": "Fells",
+      "modifiers": ["M", "-DW"]
+    },
+    {
+      "word": "Moor",
+      "modifiers": ["W", "-F"]
+    },
+    {
+      "word": "Fen",
+      "modifiers": ["W"]
+    },
+    {
+      "word": "Mire",
+      "modifiers": ["W", "-F"]
+    },
+    {
+      "word": "Vale",
+      "modifiers": ["M"]
+    },
+    {
+      "word": "Basin",
+      "modifiers": ["W"]
+    },
+    {
+      "word": "Crownlands",
+      "modifiers": ["PL", "F"]
+    },
+    {
+      "word": "Borderlands",
+      "modifiers": []
+    },
+    {
+      "word": "Hinterlands",
+      "modifiers": ["-PL", "-F"]
+    },
+    {
+      "word": "Barrowlands",
+      "modifiers": ["-PL"]
+    },
+    {
+      "word": "Downs",
+      "modifiers": ["M", "F"]
+    },
+    {
+      "word": "Heath",
+      "modifiers": ["M", "-DW"]
+    },
+    {
+      "word": "Wastes",
+      "modifiers": ["-PL", "-F", "-LW", "-DW"]
+    },
+    {
+      "word": "Demesne",
+      "modifiers": ["PL", "F"]
+    },
+    {
+      "word": "Fastness",
+      "modifiers": []
+    },
+    {
+      "word": "Expanse",
+      "modifiers": []
+    },
+    {
+      "word": "Thicket",
+      "modifiers": ["LW", "DW"]
+    },
+    {
+      "word": "Gloaming",
+      "modifiers": []
+    },
+    {
+      "word": "Labyrinth",
+      "modifiers": []
+    },
+    {
+      "word": "Shroud",
+      "modifiers": []
+    },
+    {
+      "word": "Threshold",
+      "modifiers": []
+    },
+    {
+      "word": "Palimpsest",
+      "modifiers": []
+    }
+  ],
+  "terrain": [
+    {
+      "code": "M",
+      "name": "Meadow",
+      "hue": null,
+      "props": "stones, grass",
+      "placement": "Default terrain type. There should be some kind of minimal percentage of meadow/farmlands hexes to the overall land hexes ratio."
+    },
+    {
+      "code": "LW",
+      "name": "Light woodland",
+      "hue": "W for deciduous, C for evergreen",
+      "props": "trees (both types), stones, grass",
+      "placement": "Instead of meadows, generally more towards land centre, but more common near river banks and lakes. Can form larger clusters."
+    },
+    {
+      "code": "DW",
+      "name": "Dense woodland",
+      "hue": "W for deciduous, C for evergreen",
+      "props": "tree clusters, trees, stones, grass",
+      "placement": "Instead of light woodland, generally with increasing probability closer to mountains and 3-elevation. Light woodland clusters tends to change most of their tiles into dense woodlands. Tends to form clusters themselves."
+    },
+    {
+      "code": "W",
+      "name": "Wetlands",
+      "hue": "C",
+      "props": "puddles, swamp grass, occasionally single deciduous tree",
+      "placement": "Much more uncommon than woodland. Spawn instead of meadows after woodlands generation. More common near lakes and in canyons."
+    },
+    {
+      "code": "PL",
+      "name": "Point of light",
+      "hue": "W",
+      "props": "buildings (numbers and density increasing with PL type — village, town, city)",
+      "placement": "Start with cities (0-1 per region), then towns (0-2 per region), then villages (0-5 per region). General rules: settlements prefer open water and rivers proximity, meadows or light woodland around, and elevation. Dislikes wetlands and high elevation changes around."
+    },
+    {
+      "code": "F",
+      "name": "Farmlands",
+      "hue": "W",
+      "props": "crops, occasionally single tree (both types)",
+      "placement": "Changed from meadows only after points of light placement. At most 2 tiles from PL. Prefers water proximity."
+    }
+  ]
+}
